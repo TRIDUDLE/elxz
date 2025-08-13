@@ -1,3 +1,4 @@
+//this file is to configure the rotary encoder
 #include "elxz.h"
 
 // KY040 rotary encoder config

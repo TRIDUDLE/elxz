@@ -5,13 +5,13 @@ BOOTLOADER = atmel-dfu
 # encoder configuration
 ENCODER_ENABLE = yes
 
-# oled 0,96inch configuration
-OLED_ENABLE = yes
-OLED_DRIVER = ssd1306
-OLED_TRANSPORT = i2c
-
-# other functions
+#other functions
 BOOTMAGIC_ENABLE = yes
 MOUSEKEY_ENABLE = yes
 EXTRAKEY_ENABLE = yes
+CONSOLE_ENABLE = no
+COMMAND_ENABLE = no
 NKRO_ENABLE = yes
+BACKLIGHT_ENABLE = no
+RGBLIGHT_ENABLE = no
+AUDIO_ENABLE = no
