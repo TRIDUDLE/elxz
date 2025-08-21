@@ -1,14 +1,16 @@
-//this file is to configure the rotary encoder
-#include "elxz.h"
+#include "encoder.h"
+#include "config.h"
 
-// KY040 rotary encoder config
-bool encoder_usage(uint8_t index, bool clockwise) {
-    if (index == 0) {  // first encoder KY040
-        if (clockwise) {
-            tap_code(KC_VOLU);  // right turn: volume up
-        } else {
-            tap_code(KC_VOLD);  // left turn: volume down
-        }
+#include "quantum.h"
+
+bool encoder_update_user(uint8_t index, bool clockwise) {
+    // Handle encoder rotation
+    if (clockwise) {
+        // Rotate clockwise action
+        tap_code(KC_VOLU); // Example: Increase volume
+    } else {
+        // Rotate counter-clockwise action
+        tap_code(KC_VOLD); // Example: Decrease volume
     }
-    return false;
+    return true; // Return true to indicate the update was handled
 }
